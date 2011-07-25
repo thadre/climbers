@@ -71,7 +71,7 @@
 		sprite = [CCSprite spriteWithSpriteFrameName:@"gameTitle.png"];
 		sprite.position = ccp(sw/2, sh*7/8);
 		[batch addChild:sprite];
-
+/*
 		sprite = [CCSprite spriteWithSpriteFrameName:@"moreGamesButton.png"];
 		sprite.position = ccp(sw/4, sh/2);
 		sprite.opacity = 0;
@@ -80,14 +80,14 @@
 		[sprite runAction:[CCSequence actions:a1,a2,nil]];
 		[batch addChild:sprite];
 		moreGamesButton = [sprite retain];
-		
+*/		
 		sprite = [CCSprite spriteWithSpriteFrameName:@"playButton.png"];
 		sprite.position = ccp(sw/2, sh/2);
 		sprite.opacity = 0;
 		[sprite runAction:[CCFadeIn actionWithDuration:0.2f]];
 		[batch addChild:sprite];
 		playButton = [sprite retain];
-
+/*
 		sprite = [CCSprite spriteWithSpriteFrameName:@"gameSourcesButton.png"];
 		sprite.position = ccp(sw*3/4, sh/2);
 		sprite.opacity = 0;
@@ -96,8 +96,8 @@
 		[sprite runAction:[CCSequence actions:a1,a2,nil]];
 		[batch addChild:sprite];
 		gameSourcesButton = [sprite retain];
-		
-		sprite = [CCSprite spriteWithSpriteFrameName:@"gpcLogo.png"];
+*/		
+		/*sprite = [CCSprite spriteWithSpriteFrameName:@"gpcLogo.png"];
 		sprite.position = ccp(sw*5/48, sh*11.7f/256);
 		sprite.opacity = 0;
 		a1 = [CCDelayTime actionWithDuration:0.6f];
@@ -111,7 +111,7 @@
 		a1 = [CCDelayTime actionWithDuration:0.6f];
 		a2 = [CCFadeIn actionWithDuration:0.4f];
 		[sprite runAction:[CCSequence actions:a1,a2,nil]];
-		[batch addChild:sprite];
+		[batch addChild:sprite];*/
 
 		// labels
 		CCLabelTTF *label;
@@ -119,12 +119,12 @@
 		float fontSize = 12.0f;
 		if(IS_IPHONE) fontSize = 6.0f;
 		
-		label = [CCLabelTTF labelWithString:@"Created by @haqu for Game Prototype Challenge using Cocos2D." fontName:@"Verdana-Bold" fontSize:fontSize];
+		label = [CCLabelTTF labelWithString:@"Klettern macht Spaß." fontName:@"Verdana-Bold" fontSize:fontSize];
 		label.position = ccp(sw/2, sh*5/256);
 		label.opacity = 0;
-		a1 = [CCDelayTime actionWithDuration:0.6f];
+/*		a1 = [CCDelayTime actionWithDuration:0.6f];
 		a2 = [CCFadeIn actionWithDuration:0.4f];
-		[label runAction:[CCSequence actions:a1,a2,nil]];
+		[label runAction:[CCSequence actions:a1,a2,nil]];*/
 		[self addChild:label];
 
 		[[SimpleAudioEngine sharedEngine] preloadEffect:@"click.caf"];
@@ -196,7 +196,7 @@
 	if(CGRectContainsPoint(rect, location)) {
 		[[CCDirector sharedDirector] pushScene:[Game scene]];
 	}
-	
+	/*
 	// more games button
 	rect = CGRectMake(sw/4-32, sh/2-32, 64, 64);
 	if(CGRectContainsPoint(rect, location)) {
@@ -209,7 +209,7 @@
 	if(CGRectContainsPoint(rect, location)) {
 		NSString *urlString = @"https://github.com/haqu/climbers";
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
-	}
+	}*/
 }
 
 #ifdef IOS
